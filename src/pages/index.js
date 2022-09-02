@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import VideoChannel from '../components/VideoChannel'
+import ChannelCard from '../components/ChannelCard'
 
 export default function Home() {
   return (
@@ -12,12 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='flex flex-wrap justify-around '>
-        <VideoChannel />
-        <VideoChannel />
-        <VideoChannel />
-        <VideoChannel />
-        <VideoChannel />
-        <VideoChannel />
+        <ChannelCard />
+        <ChannelCard />
+        <ChannelCard />
+        <ChannelCard />
+        <ChannelCard />
+        <ChannelCard />
       </div>
     </div>
   )
