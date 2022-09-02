@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import VideoSearch from '../components/VideoSearch'
+import VideoChannel from '../components/VideoChannel'
 
 export default function Home() {
   return (
@@ -12,12 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='flex flex-wrap justify-around '>
-        <VideoSearch />
-        <VideoSearch />
-        <VideoSearch />
-        <VideoSearch />
-        <VideoSearch />
-        <VideoSearch />
+        <VideoChannel />
+        <VideoChannel />
+        <VideoChannel />
+        <VideoChannel />
+        <VideoChannel />
+        <VideoChannel />
       </div>
     </div>
   )
