@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import preview from '../../public/img.jpg'
 import profile from '../../public/profile.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,6 +10,7 @@ import 'swiper/css';
 const ChannelCard = ({ channelDetail }) => {
   return (
     <div className="channelcard__container bg-zinc-800 w-80 rounded-4xl my-4 font-quicksand overflow-hidden">
+        <Link href={`/channel/${channelDetail?.id?.channelId}`}>
         <div className="grid grid-cols-13 items-center">
             <div className="w-12 mx-auto py-6">
                 <Image src={channelDetail?.snippet?.thumbnails?.high?.url || profile} alt="image" className="rounded-full" width={180} height={180} />
@@ -25,6 +27,7 @@ const ChannelCard = ({ channelDetail }) => {
                 <button className="bg-blue-700 text-xs py-2 px-3 rounded-xl font-bold">Subscribe</button>
             </div>
         </div>
+        </Link>
         <Swiper
             spaceBetween={-100}
             centeredSlides={true}
