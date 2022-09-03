@@ -8,8 +8,8 @@ const Videos = ({ videos }) => {
     <div className='flex flex-wrap justify-center gap-4'>
       {videos.map((item, idx) => (
         <div key={idx}>
-          {item.id.videoId && <VideoCard video={item} />}
           {item.id.channelId && <ChannelCard channelDetail={item} />}
+          {item.id.videoId && <VideoCard video={item} />}
         </div>
       ))}
     </div>

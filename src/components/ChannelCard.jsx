@@ -6,16 +6,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 
-const ChannelCard = () => {
+const ChannelCard = ({ channelDetail }) => {
   return (
     <div className="channelcard__container bg-zinc-800 w-80 rounded-4xl my-4 font-quicksand overflow-hidden">
         <div className="grid grid-cols-13 items-center">
             <div className="w-12 mx-auto py-6">
-                <Image src={profile} alt="image" className="rounded-full" />
+                <Image src={channelDetail?.snippet?.thumbnails?.high?.url || profile} alt="image" className="rounded-full" width={180} height={180} />
             </div>
             <div>
                 <div className="flex">
-                    <h3 className="mr-3 mb-1 text-md font-bold">Dua Lipa</h3>
+                    <h3 className="mr-3 mb-1 text-md font-bold">
+                        {channelDetail?.snippet?.title}
+                    </h3>
                 </div>
                 <p className="font-bold text-xs">2m <span className="text-zinc-500">Followers</span></p>
             </div>
