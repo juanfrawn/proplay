@@ -4,10 +4,10 @@ import { categories } from '../utils/constants'
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
-    <div className='flex flex-col h-screen bg-zinc-800'>
+    <div className='flex flex-col h-screen bg-gradient-to-b from-primary-light to-primary-lighter'>
       {categories.map(category => (
         <button
-          className={`flex text-md px-10 py-3 ${category.name === selectedCategory && 'bg-zinc-700'}`}
+          className={`flex text-md px-10 py-3 ${category.name === selectedCategory && 'bg-selected'}`}
           onClick={() => setSelectedCategory(category.name)}
           key={category.name}
         >
