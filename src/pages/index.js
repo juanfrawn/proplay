@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
 
-import ChannelCard from '../components/ChannelCard'
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='flex flex-wrap justify-around '>
-        <h1>Hola</h1>
+        <Feed />
       </div>
     </div>
   )

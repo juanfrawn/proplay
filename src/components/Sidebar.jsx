@@ -2,9 +2,20 @@ import React from 'react'
 
 import { categories } from '../utils/constants'
 
-const Sidebar = () => {
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
-    <div>Sidebar</div>
+    <div className='flex flex-col h-screen bg-neutral-800'>
+      {categories.map(category => (
+        <button
+          className={`flex text-md px-10 py-3 ${category.name === selectedCategory && 'bg-neutral-700'}`}
+          onClick={() => setSelectedCategory(category.name)}
+          key={category.name}
+        >
+          <span className='mr-4 self-center text-xl'>{category.icon}</span>
+          <span className=''>{category.name}</span>
+        </button>
+      ))}
+    </div>
   )
 }
 
