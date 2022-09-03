@@ -1,9 +1,10 @@
 import Nabvar from './Navbar';
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
         <>
             <Nabvar />
+            <main>{ children }</main>
         </>
     )
 }
