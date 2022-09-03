@@ -13,7 +13,7 @@ const VideoCard = ({
 }) => {
   return (
     <div className="w-full sm:w-76 md:w-80 lg:w-120 mb-5 font-quicksand">
-      <Link href={videoId ? `/videos/${videoId}` : `/videos/dua`}>
+      <Link href={videoId ? `/video/${videoId}` : `/videos/dua`}>
         <div className="object-cover w-full mb-1">
           <Image
             src={snippet?.thumbnails?.high?.url}
