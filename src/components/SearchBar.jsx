@@ -30,6 +30,7 @@ const SearchBar = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        
         <BiSearch className="hidden sm:block absolute text-xl top-3 left-4 text-neutral-200" />
         <FaMicrophone className="hidden sm:block absolute text-xl top-3 right-5 text-icons" />
       </form>
