@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 
-import Videos from "../../../src/components/Videos";
+import Videos from "../../components/Videos";
 
-import { fetchFromAPI } from "../../../src/utils/fetchFromAPI";
+import { fetchFromAPI } from "../../utils/fetchFromAPI";
 
 const SearchFeed = () => {
   const [videos, setVideos] = useState([]);
