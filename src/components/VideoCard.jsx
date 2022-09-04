@@ -12,16 +12,17 @@ const VideoCard = ({
   },
 }) => {
   return (
-    <div className="max-w-xs sm:w-76 md:w-80 lg:w-120 mb-5 font-quicksand">
+    <div className="h-auto w-full sm:w-76 md:w-80 mb-5 font-quicksand">
       <Link href={videoId ? `/video/${videoId}` : `/videos/dua`}>
         <div>
           <div className="w-full mb-1">
             <Image
               src={snippet?.thumbnails?.high?.url}
               alt={snippet?.title}
-              width={320}
-              height={180}
-              className="rounded-3xl object-cover"
+              width="450"
+              height="250"
+              className="rounded-3xl object-cover md:w-80 "
+
             />
           </div>
           <div className="flex justify-between">

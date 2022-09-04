@@ -5,7 +5,7 @@ import { BiPlus } from 'react-icons/bi'
 
 const NavbarBottom = () => {
   return (
-    <div className="fixed bottom-0 bg-gradient-to-r from-primary-light to-primary-lighter w-full py-4 md:hidden">
+    <div className="fixed z-10 bottom-0 bg-gradient-to-r from-primary-light to-primary-lighter w-full py-4 md:hidden">
         <div className='flex justify-around items-center text-xl text-icons'>
             <AiFillHome />
             <AiFillStar />

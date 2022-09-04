@@ -22,7 +22,7 @@ function Sidebar() {
   const [sidebarTextVisibility, setSidebarTextVisibility] = useState(true);
 
   return (
-    <div className={`h-screen bg-gradient-to-b from-primary-light to-primary-lighter overflow-y-auto transition-all ${sidebarVisibility ? 'sidebar__open' : 'sidebar__close'}`}>
+    <div className={`hidden md:block h-screen bg-gradient-to-b from-primary-light to-primary-lighter overflow-y-auto transition-all ${sidebarVisibility ? 'sidebar__open' : 'sidebar__close'}`}>
       <a
         onClick={() => {
           if(sidebarVisibility) {

@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
     <>
       <div className="grid grid-cols-layout">
         <Sidebar />
+        <NavbarBottom />
         <div >
           <main className="h-screen overflow-y-auto">
             <Nabvar />

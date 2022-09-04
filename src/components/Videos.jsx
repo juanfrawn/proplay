@@ -11,7 +11,7 @@ const Videos = ({ videos }) => {
     <div>
       <div>
       {channel.map((item, idx) => (
-        <div key={idx} className="w-80 sm:w-2/3 mx-auto px-2">
+        <div key={idx} className="w-full sm:w-2/3 mx-auto px-2">
           {item?.id.channelId && <ChannelCard channelDetail={item} />}
         </div>
       ))}

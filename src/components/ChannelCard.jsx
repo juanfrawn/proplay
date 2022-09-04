@@ -3,7 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 import preview from '../../public/img.jpg'
 import profile from '../../public/profile.jpg'
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import {fetchFromAPI} from '../utils/fetchFromAPI'
 
@@ -17,7 +16,6 @@ const ChannelCard = ({ channelDetail }) => {
         .then((data) => setDetails(data?.items[0]))
     }, [channelDetail?.id?.channelId]);
 
-    console.log(channelDetail)
   return (
     <div className="bg-component rounded-3xl my-4 font-quicksand overflow-hidden">
         <Link href={`/channel/${channelDetail?.id?.channelId}`}>
@@ -31,7 +29,7 @@ const ChannelCard = ({ channelDetail }) => {
                         {channelDetail?.snippet?.title}
                     </h3>
                 </div>
-                <p className="font-bold text-xs">{details?.statistics?.subscriberCount}<span className="text-zinc-500">{details ? 'Followers' : ''}</span></p>
+                <p className="font-bold text-xs">{details?.statistics?.subscriberCount}<span className="text-zinc-500 ml-1">{details ? 'Followers' : ''}</span></p>
             </div>
             <div className="mx-auto">
                 <button className="bg-blue-700 text-xs py-2 px-3 rounded-xl font-bold">Subscribe</button>
