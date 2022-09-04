@@ -9,10 +9,10 @@ import 'swiper/css';
 
 const ChannelCard = ({ channelDetail }) => {
   return (
-    <div className="channelcard__container bg-zinc-800 w-80 rounded-4xl my-4 font-quicksand overflow-hidden">
+    <div className="bg-component rounded-3xl my-4 font-quicksand overflow-hidden">
         <Link href={`/channel/${channelDetail?.id?.channelId}`}>
         <div className="grid grid-cols-13 items-center">
-            <div className="w-12 mx-auto py-6">
+            <div className="w-14 mx-auto py-4">
                 <Image src={channelDetail?.snippet?.thumbnails?.high?.url || profile} alt="image" className="rounded-full" width={180} height={180} />
             </div>
             <div>
@@ -28,28 +28,6 @@ const ChannelCard = ({ channelDetail }) => {
             </div>
         </div>
         </Link>
-        <Swiper
-            spaceBetween={-100}
-            centeredSlides={true}
-            slidesPerView={1}
-            initialSlide={1}
-        >
-            <SwiperSlide>
-                <div className="w-52 h-32 flex mx-auto">
-                    <Image src={preview} alt="image" className="object-cover rounded-3xl" />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="w-52 h-32 flex mx-auto">
-                <Image src={preview} alt="image" className="object-cover rounded-3xl" />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="w-52 h-32 flex mx-auto">
-                <Image src={preview} alt="image" className="object-cover rounded-3xl" />
-                </div>
-            </SwiperSlide>
-        </Swiper>
     </div>
   )
 }

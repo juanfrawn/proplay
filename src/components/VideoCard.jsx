@@ -12,10 +12,10 @@ const VideoCard = ({
   },
 }) => {
   return (
-    <div className="w-full sm:w-76 md:w-80 lg:w-120 mb-5 font-quicksand">
+    <div className="max-w-xs sm:w-76 md:w-80 lg:w-120 mb-5 font-quicksand">
       <Link href={videoId ? `/video/${videoId}` : `/videos/dua`}>
         <div>
-          <div className="object-cover w-full mb-1">
+          <div className="w-full mb-1">
             <Image
               src={snippet?.thumbnails?.high?.url}
               alt={snippet?.title}
@@ -24,11 +24,13 @@ const VideoCard = ({
               className="rounded-3xl object-cover"
             />
           </div>
-          <div className="flex">
-            <h3 className="font-bold text-md mb-1">
-              {snippet?.title.slice(0, 60) || "Titulo"}
+          <div className="flex justify-between">
+            <h3 className="font-bold text-sm mb-1">
+              {snippet?.title.slice(0, 70) || "Titulo"}
             </h3>
-              <BsThreeDotsVertical className="text-lg my-2 mr-1 text-gray-400" />
+            <div className="pt-2">
+              <BsThreeDotsVertical className="text-lg ml-4 text-gray-400" />
+              </div>
           </div>
         </div>
       </Link>
@@ -39,7 +41,12 @@ const VideoCard = ({
         </p>
       </Link>
       <p className="text-gray-400 text-xs">
-        12m views <span className="text-yellow-400 mx-2">•</span> 2 days ago
+      {snippet?.publishedAt.slice(8, 10)}-
+      {snippet?.publishedAt.slice(5, 7)}-
+        {snippet?.publishedAt.slice(0, 4)}
+        <span className="text-yellow-400 mx-2">•</span>
+        {`${snippet?.publishedAt.slice(11, 13)}:${snippet?.publishedAt.slice(14, 16)}`}
+        {parseInt(snippet?.publishedAt.slice(11, 13)) > 12 ? " AM" : " PM"}
       </p>
     </div>
   );

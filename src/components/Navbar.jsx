@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className='flex items-center gap-6'>
         <button className='bg-component py-2 px-6 rounded-2xl hidden md:inline-flex'>Stream</button>
         <div className='flex items-center text-icons text-xl gap-6'>
-          <BsFillBellFill />
-          <BsFillChatLeftDotsFill />
+          <BsFillBellFill className='hidden'/>
+          <BsFillChatLeftDotsFill className='hidden'/>
           <Image src={profile} alt="profile" className='rounded-full' width={32} height={32} />
         </div>
       </div>

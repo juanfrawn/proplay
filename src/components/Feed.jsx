@@ -15,12 +15,12 @@ const Feed = () => {
   }, [selectedCategory])
 
   return (
-    <div className="flex flex-col md:flex-row w-full">
+    <div className="flex flex-col w-full">
         <Sidebar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <div>
+        <div className='w-full'>
           <Videos videos={videos} />
         </div>
     </div>

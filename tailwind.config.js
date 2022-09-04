@@ -28,7 +28,7 @@ module.exports = {
       },
       
       gridTemplateColumns: {
-        '13': 'minmax(60px, 90px) minmax(110px, 1fr) minmax(80px, 100px)',
+        '13': 'minmax(70px, 100px) minmax(110px, 1fr) minmax(100px, 200px)',
         'navbar': 'minmax(60px, max-content) 1fr minmax(50px, max-content)',
       },
       spacing: {
@@ -40,6 +40,9 @@ module.exports = {
       fontFamily: {
         'quicksand': 'Quicksand',
       },
+      flex: {
+        '2': '1 0 100%'
+      }
 
     },
   },
