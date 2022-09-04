@@ -21,7 +21,7 @@ function Sidebar() {
   const [sidebarTextVisibility, setSidebarTextVisibility] = useState(true);
 
   return (
-    <div className={`h-screen bg-gradient-to-b from-primary-light to-primary-lighter transition-all ${sidebarVisibility ? 'sidebar__open' : 'sidebar__close'}`}>
+    <div className={`bg-gradient-to-b from-primary-light to-primary-lighter overflow-y-auto transition-all ${sidebarVisibility ? 'sidebar__open' : 'sidebar__close'}`}>
       <a
         onClick={() => {
           if(sidebarVisibility) {
@@ -35,7 +35,7 @@ function Sidebar() {
           }
         }}
         className='flex justify-center py-2 border-b border-border'>
-          <Image src="/logo.png" alt="logo" width={70} height={70} />
+          <Image src="/logo.png" alt="logo" width={60} height={60} />
         </a>
       <div className='font-bold'>
         <ul className='py-3 border-b border-border'>
@@ -62,6 +62,7 @@ function Sidebar() {
         <ul className='py-3 border-b border-border'>
           <li className='flex items-center py-3 px-6'><AiFillSetting className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Settings</span></li>
         </ul>
+        
       </div>
     </div>
   )

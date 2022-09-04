@@ -5,12 +5,13 @@ import Sidebar from "./Sidebar";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="flex">
+      <div className="grid grid-cols-layout">
         <Sidebar />
-        <div>
+        <div className="">
+        <main>
           <Nabvar />
-          <NavbarBottom />
-          <main>{children}</main>
+          {children}
+        </main>
         </div>
       </div>
     </>
