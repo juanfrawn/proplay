@@ -31,7 +31,7 @@ const VideoChannel = ({ video: { id, snippet } }) => {
               11,
               13
             )}:${snippet?.publishedAt.slice(14, 16)}`}
-            {parseInt(snippet?.publishedAt.slice(11, 13)) > 12 ? " AM" : " PM"}
+            {parseInt(snippet?.publishedAt.slice(11, 13)) > 12 ? " PM" : " AM"}
           </p>
         </div>
         <div className="text-lg my-2 mr-1 text-gray-400">
