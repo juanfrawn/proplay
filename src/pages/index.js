@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
 
 

@@ -25,11 +25,12 @@ module.exports = {
         'selected': '#201e2c',
         'secondary': '#dd2058',
         'icons': '#504f56',
+        'border': '#1c222f'
       },
       
       gridTemplateColumns: {
         '13': 'minmax(70px, 100px) minmax(110px, 1fr) minmax(100px, 200px)',
-        'navbar': 'minmax(60px, max-content) 1fr minmax(50px, max-content)',
+        'navbar': '1fr minmax(50px, max-content)',
       },
       spacing: {
         '76': '300px',

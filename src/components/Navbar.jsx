@@ -10,11 +10,11 @@ import profile from '../../public/profile.jpg'
 const Navbar = () => {
   return (
     <div className='grid grid-cols-navbar py-4 mx-4 text-sm'>
-      <Link href="/">
+      {/* <Link href="/">
         <a className='w-10 mr-4'>
           <Image src={logo} alt="logo" />
         </a>
-      </Link>
+      </Link> */}
       <SearchBar />
       <div className='flex items-center gap-6'>
         <button className='bg-component py-2 px-6 rounded-2xl hidden md:inline-flex'>Stream</button>

@@ -30,3 +30,57 @@ body {
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+.sidebar__close {
+  animation: sidebarClose .3s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sidebarClose {
+  0% {
+    width: 240px;
+  } 100% {
+    width: 80px;
+  }
+}
+
+.sidebar__open {
+  animation: sidebarOpen .3s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sidebarOpen {
+  0% {
+    width: 80px;
+  } 100% {
+    width: 240px;
+  }
+}
+
+.showText {
+  animation: showText .3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showText {
+  0% {
+    display: hidden;
+  } 100% {
+    display: inline;
+  }
+}
+
+.hiddeText {
+  animation: hiddeText .3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hiddeText {
+  0% {
+    display: inline;
+  } 100% {
+    display: hidden;
+  }
+}
