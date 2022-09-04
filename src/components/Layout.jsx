@@ -7,11 +7,11 @@ const Layout = ({ children }) => {
     <>
       <div className="grid grid-cols-layout">
         <Sidebar />
-        <div className="">
-        <main>
-          <Nabvar />
-          {children}
-        </main>
+        <div >
+          <main className="h-screen overflow-y-auto">
+            <Nabvar />
+            {children}
+          </main>
         </div>
       </div>
     </>
