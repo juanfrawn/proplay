@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import profile from '../../public/profile.jpg'
 
 import {GoHome} from 'react-icons/go'
@@ -39,7 +40,9 @@ function Sidebar() {
         </a>
       <div className='font-bold'>
         <ul className='py-3 border-b border-border'>
+          <Link href="/">
           <li className='flex items-center py-3 px-6 bg-selected'><GoHome className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Home</span></li>
+          </Link>
           <li className='flex items-center py-3 px-6'><GoGlobe className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Discover</span></li>
           <li className='flex items-center py-3 px-6'><GoStar className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Favorites</span></li>
         </ul>
