@@ -19,8 +19,8 @@ const VideoCard = ({
             <Image
               src={snippet?.thumbnails?.high?.url}
               alt={snippet?.title}
-              width="550"
-              height="310"
+              width="640"
+              height="340"
               className="rounded-3xl object-cover md:w-80 "
 
             />
