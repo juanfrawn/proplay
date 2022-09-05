@@ -8,14 +8,14 @@ const VideoPreview = ({ video: { id, snippet } }) => {
   console.log(id)
   return (
     <Link href={id ? `/video/${id.videoId}` : `/video/dua`}>
-    <div className="w-full xl:flex mb-5 font-quicksand">
-      <div className="object-cover w-full mb-1 sm:w-72 xl:min-w-">
+    <div className="w-full sm:w-2/5 xl:w-full xl:flex mb-5 font-quicksand">
+      <div className="object-cover w-full mb-1 xl:w-72 xl:min-w-">
         <Image
           src={snippet?.thumbnails?.high?.url}
           alt="image"
           className="rounded-3xl xl:rounded-xl object-cover"
           width="640"
-          height="380"
+          height="360"
         />
       </div>
 

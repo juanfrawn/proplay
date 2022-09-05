@@ -17,6 +17,10 @@ body {
   display: none;
 }
 
+.layout::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

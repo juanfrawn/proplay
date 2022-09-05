@@ -6,10 +6,14 @@ import VideoPreview from "../../components/VideoPreview";
 import { fetchFromAPI } from "../../utils/fetchFromAPI";
 
 import { BsHandThumbsUp } from "react-icons/bs";
+import { FaChevronDown } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa";
+import { AiOutlineUser } from "react-icons/ai";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [releatedVideos, setReleatedVideos] = useState([]);
+  const [showMore, setShowMore] = useState(false);
   const { query } = useRouter();
 
   useEffect(() => {
@@ -36,22 +40,27 @@ const VideoDetail = () => {
         />
       </div>
         
-        <div className="mx-4">
-        <h1 className="text-3xl font-bold mt-6 mb-4">{videoDetail?.snippet?.title}</h1>
+        <div className="p-2">
+        <h1 className="text-xl font-bold mt-6 mb-4">{videoDetail?.snippet?.title}</h1>
         <div className="flex justify-between mb-10">
-          <span className="mr-3 text-lg">{videoDetail?.statistics.viewCount} visualizaciones</span>
-          <span className="text-lg flex items-center">{videoDetail?.statistics.likeCount}<BsHandThumbsUp className="ml-2" /> </span>
+          <span className="mr-3 text-base">{videoDetail?.statistics.viewCount} visualizaciones</span>
+          <span className="text-base flex items-center">{videoDetail?.statistics.likeCount}<BsHandThumbsUp className="ml-2" /> </span>
         </div>
-        <div className="mb-10 text-lg">
-          <h2>{videoDetail?.snippet?.channelTitle}</h2>
+        <div className="mb-10 text-md">
+          <h2 className="flex items-center gap-2"><span className="text-xl"><AiOutlineUser /></span>{videoDetail?.snippet?.channelTitle}</h2>
         </div>
         <div>
-          <p className="mb-20">{videoDetail?.snippet?.description.substring(0, 400)}</p>
+          <p className="text-sm break-all">{showMore ? videoDetail?.snippet?.description : videoDetail?.snippet?.description.substring(0, 200)}</p>
+          <button 
+            onClick={() => setShowMore(!showMore)}
+            className="mb-10 w-full p-2 rounded-2xl flex justify-center items-center gap-2">
+              {showMore ? 'Show Less' : 'Show more'}{showMore ? <FaChevronUp />  : <FaChevronDown />}
+          </button>
         </div>
         </div>
       </div>
 
-      <div>
+      <div className="sm:flex sm:flex-wrap sm:justify-around xl:block xl:px-4">
         {video?.map((video, idx) => {
           return <VideoPreview video={video} key={idx} />;
         })}

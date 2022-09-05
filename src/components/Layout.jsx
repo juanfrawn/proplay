@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <Sidebar />
         <NavbarBottom />
         <div >
-          <main className="h-screen overflow-y-auto">
+          <main className="layout h-screen overflow-y-auto">
             <Nabvar />
             {children}
           </main>
