@@ -18,16 +18,18 @@ import { FaGooglePlay } from 'react-icons/fa'
 import Logo from '../../public/logo.png'
 
 function Sidebar() {
-  const [sidebarVisibility, setSidebarVisibility] = useState(true);
-  const [sidebarTextVisibility, setSidebarTextVisibility] = useState(true);
+  const [sidebarVisibility, setSidebarVisibility] = useState(false);
+  const [sidebarClicked, setSidebarClicked] = useState(false);
+  const [sidebarTextVisibility, setSidebarTextVisibility] = useState(false);
 
   return (
-    <div className={`hidden md:block h-screen bg-gradient-to-b from-primary-light to-primary-lighter overflow-y-auto transition-all ${sidebarVisibility ? 'sidebar__open' : 'sidebar__close'}`}>
+    <div className={`hidden md:block h-screen bg-gradient-to-b from-primary-light to-primary-lighter overflow-y-auto transition-all ${sidebarVisibility ? 'sidebar__open' : ''} ${!sidebarVisibility && sidebarClicked ? 'sidebar__close' : ''}`}>
       <a
         onClick={() => {
+          setSidebarClicked(true);
           if(sidebarVisibility) {
             setSidebarTextVisibility(!sidebarTextVisibility);
-              setSidebarVisibility(!sidebarVisibility);
+            setSidebarVisibility(!sidebarVisibility);
           } else {
             setSidebarVisibility(!sidebarVisibility);
             setTimeout(() => {
