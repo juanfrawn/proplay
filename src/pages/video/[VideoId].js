@@ -19,7 +19,7 @@ const VideoDetail = () => {
 
     fetchFromAPI(
       `search?part=snippet&relatedToVideoId=${query.VideoId}&type=video`
-    ).then((data) => setReleatedVideos(data.items.slice(0, 19)));
+    ).then((data) => setReleatedVideos(data.items?.slice(0, 19)));
   }, [query]);
 
   const video = releatedVideos?.filter(videos => videos?.snippet?.title)

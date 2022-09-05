@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import preview from "../../public/img.jpg";
 import profile from "../../public/profile.jpg";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 const VideoPreview = ({ video: { id, snippet } }) => {
+  console.log(id)
   return (
+    <Link href={id ? `/video/${id.videoId}` : `/video/dua`}>
     <div className="w-full xl:flex mb-5 font-quicksand">
       <div className="object-cover w-full mb-1 sm:w-72 xl:min-w-">
         <Image
@@ -15,6 +18,7 @@ const VideoPreview = ({ video: { id, snippet } }) => {
           height="380"
         />
       </div>
+
       <div className="flex">
         <div className="max-w-full w-full mx-1 sm:ml-4 sm:my-2 sm:mr-10 ">
           <h3 className="font-bold text-md mb-1 sm:text-lg sm:mb-0 xl:text-sm">
@@ -40,6 +44,7 @@ const VideoPreview = ({ video: { id, snippet } }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
