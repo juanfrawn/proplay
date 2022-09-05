@@ -6,7 +6,7 @@ import { AppContext } from '../../context/AppContext'
 import { useRouter } from 'next/router'
 
 
-export default function Home() {
+export default function Discover() {
   const { setLocation } = useContext(AppContext)
   const {pathname} = useRouter()
   setLocation(pathname)

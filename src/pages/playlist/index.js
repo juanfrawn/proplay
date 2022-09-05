@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 
 import { fetchFromAPI } from "../../utils/fetchFromAPI";
 
-export default function Home() {
+export default function Playlist() {
   const [videos, setVideos] = useState([]);
   const { setLocation } = useContext(AppContext)
   const {pathname} = useRouter()
