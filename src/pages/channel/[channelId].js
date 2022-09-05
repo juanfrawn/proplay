@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
 
-import VideoChannel from '../../components/VideoChannel'
+import VideoCard from '../../components/VideoCard'
 
 import Image from 'next/image';
 import { fetchFromAPI } from '../../utils/fetchFromAPI';
@@ -43,7 +43,7 @@ const ChannelDetail = () => {
       <div className='flex flex-wrap justify-center gap-x-4 text-start'>
         {videoDetail?.map((video, idx) => {
           return (
-            <VideoChannel
+            <VideoCard
               video={video}
               key={idx}
             />

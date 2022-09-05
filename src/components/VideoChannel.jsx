@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import preview from "../../public/img.jpg";
 import profile from "../../public/profile.jpg";
 import { BsThreeDotsVertical } from "react-icons/bs";
