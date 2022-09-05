@@ -5,7 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 
 const VideoPreview = ({ video: { id, snippet } }) => {
   return (
-    <div className="w-full sm:flex mb-5 font-quicksand">
+    <div className="w-full xl:flex mb-5 font-quicksand">
       <div className="object-cover w-full mb-1 sm:w-72 xl:min-w-">
         <Image
           src={snippet?.thumbnails?.high?.url}
