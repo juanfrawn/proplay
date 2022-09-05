@@ -6,24 +6,24 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 const VideoPreview = ({ video: { id, snippet } }) => {
   return (
     <div className="w-full sm:flex mb-5 font-quicksand">
-      <div className="object-cover w-full mb-1 sm:w-72">
+      <div className="object-cover w-full mb-1 sm:w-72 xl:min-w-">
         <Image
           src={snippet?.thumbnails?.high?.url}
           alt="image"
-          className="rounded-3xl"
-          width={320}
-          height={180}
+          className="rounded-3xl xl:rounded-xl object-cover"
+          width="640"
+          height="380"
         />
       </div>
       <div className="flex">
-        <div className="max-w-full w-full mx-1 sm:ml-4 sm:my-2 sm:mr-10">
-          <h3 className="font-bold text-md mb-1 sm:text-lg sm:mb-0">
-            {snippet?.title.slice(0, 60) || "Titulo"}
+        <div className="max-w-full w-full mx-1 sm:ml-4 sm:my-2 sm:mr-10 ">
+          <h3 className="font-bold text-md mb-1 sm:text-lg sm:mb-0 xl:text-sm">
+            {snippet?.title.slice(0, 40) || "Titulo"}
           </h3>
-          <p className="text-gray-400 text-sm mb-2 sm:mb-4">
+          <p className="text-gray-400 text-sm mb-2 sm:mb-4 xl:text-xs xl:mb-2">
             {snippet?.channelTitle || "Channel"}
           </p>
-          <p className="text-gray-400 text-xs">
+          <p className="text-gray-400 text-xs xl:hidden">
             {snippet?.publishedAt.slice(8, 10)}-
             {snippet?.publishedAt.slice(5, 7)}-
             {snippet?.publishedAt.slice(0, 4)}

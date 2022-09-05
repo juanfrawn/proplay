@@ -32,7 +32,7 @@ module.exports = {
         '13': 'minmax(70px, 100px) minmax(110px, 1fr) minmax(100px, 200px)',
         'navbar': '1fr minmax(50px, max-content)',
         'layout': 'minmax(0, max-content) minmax(0, 1fr)',
-        'video': '1fr minmax(0, 500px)',
+        'video': 'minmax(0, 100%) minmax(0, 450px)',
       },
       spacing: {
         '76': '300px',
