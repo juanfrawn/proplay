@@ -5,6 +5,7 @@ import preview from '../../public/img.jpg'
 import profile from '../../public/profile.jpg'
 
 import {fetchFromAPI} from '../utils/fetchFromAPI'
+import { subscriberCountShort } from '../utils/subscriberCountShort'
 
 
 const ChannelCard = ({ channelDetail }) => {
@@ -29,7 +30,7 @@ const ChannelCard = ({ channelDetail }) => {
                         {channelDetail?.snippet?.title}
                     </h3>
                 </div>
-                <p className="font-bold text-xs">{details?.statistics?.subscriberCount}<span className="text-zinc-500 ml-1">{details ? 'Followers' : ''}</span></p>
+                <p className="font-bold text-xs">{subscriberCountShort(details?.statistics?.subscriberCount)}<span className="text-zinc-500 ml-1">{details ? 'Followers' : ''}</span></p>
             </div>
             <div className="mx-auto">
                 <button className="bg-blue-700 text-xs py-2 px-3 rounded-xl font-bold">Subscribe</button>

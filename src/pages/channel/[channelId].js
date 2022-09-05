@@ -5,6 +5,7 @@ import VideoCard from "../../components/VideoCard";
 
 import Image from "next/image";
 import { fetchFromAPI } from "../../utils/fetchFromAPI";
+import { subscriberCountShort } from "../../utils/subscriberCountShort";
 
 import profile from "../../../public/profile.jpg";
 
@@ -51,7 +52,7 @@ const ChannelDetail = () => {
       </h1>
       <p className="mb-10">
         <span className="font-bold">
-          {channelDetail?.statistics?.subscriberCount}
+          {subscriberCountShort(channelDetail?.statistics?.subscriberCount)}
         </span>{" "}
         Followers
       </p>
