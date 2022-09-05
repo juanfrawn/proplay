@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { AppContext } from '../context/AppContext'
 
 import {GoHome} from 'react-icons/go'
 import {GoGlobe} from 'react-icons/go'
@@ -25,6 +27,8 @@ function Sidebar() {
   const [sidebarClicked, setSidebarClicked] = useState(false);
   const [sidebarTextVisibility, setSidebarTextVisibility] = useState(false);
 
+  const { location } = useContext(AppContext);
+
   return (
     <div className={`hidden md:block h-screen bg-gradient-to-b from-primary-light to-primary-lighter overflow-y-auto transition-all ${sidebarVisibility ? 'sidebar__open' : ''} ${!sidebarVisibility && sidebarClicked ? 'sidebar__close' : ''}`}>
       <a
@@ -46,21 +50,21 @@ function Sidebar() {
       <div className='font-bold'>
         <ul className='py-3 border-b border-border'>
           <Link href="/">
-          <li className='cursor-pointer flex items-center py-3 px-6 bg-selected'><GoHome className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Home</span></li>
+          <li className={`${location === '/' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><GoHome className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Home</span></li>
           </Link>
           <Link href="/discover">
-          <li className='cursor-pointer flex items-center py-3 px-6'><GoGlobe className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Discover</span></li>
+          <li className={`${location === '/discover' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><GoGlobe className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Discover</span></li>
           </Link>
           <Link href="/favorites">
-          <li className='cursor-pointer flex items-center py-3 px-6'><GoStar className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Favorites</span></li>
+          <li className={`${location === '/favorites' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><GoStar className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Favorites</span></li>
           </Link>
         </ul>
         <ul className='py-3 border-b border-border'>
           <Link href="/playlist">
-          <li className='cursor-pointer flex items-center py-3 px-6'><GoThreeBars className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Playlist</span></li>
+          <li className={`${location === '/playlist' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><GoThreeBars className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Playlist</span></li>
           </Link>
           <Link href="/trends">
-          <li className='cursor-pointer flex items-center py-3 px-6'><GoFlame className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Trends</span></li>
+          <li className={`${location === '/trends' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><GoFlame className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Trends</span></li>
           </Link>
         </ul>
         <ul className='py-3 border-b border-border'>
@@ -82,12 +86,12 @@ function Sidebar() {
         </ul>
         <ul className='py-3 border-b border-border'>
           <Link href='/download'>
-            <li className='cursor-pointer flex items-center py-3 px-6'><FaGooglePlay className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Download App</span></li>
+            <li className={`${location === '/download' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><FaGooglePlay className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Download App</span></li>
           </Link>
         </ul>
         <ul className='py-3 border-b border-border'>
           <Link href='/settings'>
-            <li className='cursor-pointer flex items-center py-3 px-6'><AiFillSetting className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Settings</span></li>
+            <li className={`${location === '/settings' ? 'bg-selected' : ''} cursor-pointer flex items-center py-3 px-6`}><AiFillSetting className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Settings</span></li>
           </Link>
         </ul>
         

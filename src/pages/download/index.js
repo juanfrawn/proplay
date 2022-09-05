@@ -1,8 +1,15 @@
 import Link from 'next/link'
 import { FaGooglePlay } from 'react-icons/fa'
 import { SiAppstore } from 'react-icons/si'
+import { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
+import { useRouter } from 'next/router'
 
 const Download = () => {
+  const { setLocation } = useContext(AppContext)
+  const {pathname} = useRouter()
+  setLocation(pathname)
+
   return (
     <div className='w-screen md:w-full h-screen text-center flex flex-col pt-20 items-center'>
         <h1 className='text-2xl font-bold mb-10'>Download the app</h1>

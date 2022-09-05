@@ -1,9 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Feed from '../components/Feed'
+import { useContext } from 'react'
+import { AppContext } from '../context/AppContext'
+import { useRouter } from 'next/router'
 
 
 export default function Home() {
+  const { setLocation } = useContext(AppContext)
+  const {pathname} = useRouter()
+  setLocation(pathname)
+
   return (
     <div className=''>
       <Head>
