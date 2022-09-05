@@ -18,7 +18,7 @@ const ChannelCard = ({ channelDetail }) => {
     }, [channelDetail?.id?.channelId]);
 
   return (
-    <div className="bg-component rounded-3xl my-4 font-quicksand overflow-hidden">
+    <div className="bg-component rounded-3xl my-4 font-quicksand overflow-hidden cursor-pointer">
         <Link href={`/channel/${channelDetail?.id?.channelId}`}>
         <div className="grid grid-cols-13 items-center">
             <div className="w-14 mx-auto py-4">

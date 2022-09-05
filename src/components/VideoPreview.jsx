@@ -8,7 +8,7 @@ const VideoPreview = ({ video: { id, snippet } }) => {
   console.log(id)
   return (
     <Link href={id ? `/video/${id.videoId}` : `/video/dua`}>
-    <div className="w-full sm:w-2/5 xl:w-full xl:flex mb-5 font-quicksand">
+    <div className="w-full sm:w-2/5 xl:w-full xl:flex mb-5 font-quicksand cursor-pointer">
       <div className="object-cover w-full mb-1 xl:w-72 xl:min-w-">
         <Image
           src={snippet?.thumbnails?.high?.url}

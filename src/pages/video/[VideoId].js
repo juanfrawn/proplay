@@ -55,7 +55,7 @@ const VideoDetail = () => {
             </span>
           </div>
           <Link href={`/channel/${videoDetail?.snippet?.channelId}`}>
-            <div className="mb-10 text-md">
+            <div className="mb-10 text-md cursor-pointer">
               <h2 className="flex items-center gap-2">
                 <span className="text-xl">
                   <AiOutlineUser />

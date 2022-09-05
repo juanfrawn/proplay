@@ -40,54 +40,54 @@ function Sidebar() {
             }, 200);
           }
         }}
-        className='flex justify-center py-2 border-b border-border'>
+        className='flex justify-center py-2 border-b border-border cursor-pointer'>
           <Image src="/logo.png" alt="logo" width={60} height={60} />
         </a>
       <div className='font-bold'>
         <ul className='py-3 border-b border-border'>
           <Link href="/">
-          <li className='flex items-center py-3 px-6 bg-selected'><GoHome className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Home</span></li>
+          <li className='cursor-pointer flex items-center py-3 px-6 bg-selected'><GoHome className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Home</span></li>
           </Link>
           <Link href="/discover">
-          <li className='flex items-center py-3 px-6'><GoGlobe className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Discover</span></li>
+          <li className='cursor-pointer flex items-center py-3 px-6'><GoGlobe className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Discover</span></li>
           </Link>
           <Link href="/favorites">
-          <li className='flex items-center py-3 px-6'><GoStar className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Favorites</span></li>
+          <li className='cursor-pointer flex items-center py-3 px-6'><GoStar className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Favorites</span></li>
           </Link>
         </ul>
         <ul className='py-3 border-b border-border'>
           <Link href="/playlist">
-          <li className='flex items-center py-3 px-6'><GoThreeBars className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Playlist</span></li>
+          <li className='cursor-pointer flex items-center py-3 px-6'><GoThreeBars className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Playlist</span></li>
           </Link>
           <Link href="/trends">
-          <li className='flex items-center py-3 px-6'><GoFlame className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Trends</span></li>
+          <li className='cursor-pointer flex items-center py-3 px-6'><GoFlame className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Trends</span></li>
           </Link>
         </ul>
         <ul className='py-3 border-b border-border'>
-          <li className='flex items-center py-3 px-6'><GoHeart className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Subscriptios</span></li>
+          <li className='cursor-pointer flex items-center py-3 px-6'><GoHeart className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`}/><span className={sidebarTextVisibility ? '' : 'hidden'}>Subscriptios</span></li>
           <ul className='pb-0'>
             <Link href='/channel/UC-J-KZfRV8c13fOCkhXdLiQ'>
-              <li className='flex items-center py-3 px-6'><Image src={channel_1} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Dua Lipa</span></li>
+              <li className='cursor-pointer flex items-center py-3 px-6'><Image src={channel_1} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Dua Lipa</span></li>
             </Link>
             <Link href='/channel/UC5H_KXkPbEsGs0tFt8R35mA'>
-              <li className='flex items-center py-3 px-6'><Image src={channel_2} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Martin Garrix</span></li>
+              <li className='cursor-pointer flex items-center py-3 px-6'><Image src={channel_2} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Martin Garrix</span></li>
             </Link>
             <Link href='/channel/UCIwFjwMjI0y7PDBVEO9-bkQ'>
-              <li className='flex items-center py-3 px-6'><Image src={channel_3} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Justin Bieber</span></li>
+              <li className='cursor-pointer flex items-center py-3 px-6'><Image src={channel_3} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Justin Bieber</span></li>
             </Link>
             <Link href='/channel/UCmBA_wu8xGg1OfOkfW13Q0Q'>
-              <li className='flex items-center py-3 px-6'><Image src={channel_4} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Bad Bunny</span></li>
+              <li className='cursor-pointer flex items-center py-3 px-6'><Image src={channel_4} alt="Profile" width={25} height={25} className='rounded-full' /><span className={`${sidebarTextVisibility ? 'ml-3' : 'hidden'}`}>Bad Bunny</span></li>
             </Link>
           </ul>
         </ul>
         <ul className='py-3 border-b border-border'>
           <Link href='/download'>
-            <li className='flex items-center py-3 px-6'><FaGooglePlay className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Download App</span></li>
+            <li className='cursor-pointer flex items-center py-3 px-6'><FaGooglePlay className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Download App</span></li>
           </Link>
         </ul>
         <ul className='py-3 border-b border-border'>
           <Link href='/settings'>
-            <li className='flex items-center py-3 px-6'><AiFillSetting className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Settings</span></li>
+            <li className='cursor-pointer flex items-center py-3 px-6'><AiFillSetting className={`text-2xl text-icons ${sidebarVisibility ? 'mr-3' : ''}`} /><span className={sidebarTextVisibility ? '' : 'hidden'}>Settings</span></li>
           </Link>
         </ul>
         
