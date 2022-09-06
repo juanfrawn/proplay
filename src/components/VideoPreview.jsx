@@ -9,7 +9,7 @@ const VideoPreview = ({ video: { id, snippet } }) => {
   return (
     <Link href={id ? `/video/${id.videoId}` : `/video/dua`}>
     <div className="w-full sm:w-2/5 xl:w-full xl:flex mb-5 font-quicksand cursor-pointer">
-      <div className="object-cover w-full mb-1 xl:w-72 xl:min-w-">
+      <div className="object-cover w-full mb-1 xl:w-56">
         <Image
           src={snippet?.thumbnails?.high?.url}
           alt="image"
@@ -19,7 +19,7 @@ const VideoPreview = ({ video: { id, snippet } }) => {
         />
       </div>
 
-      <div className="flex">
+      <div className="flex w-72">
         <div className="max-w-full w-full mx-1 sm:ml-4 sm:my-2 sm:mr-10 ">
           <h3 className="font-bold text-md mb-1 sm:text-lg sm:mb-0 xl:text-sm">
             {snippet?.title.slice(0, 40) || "Titulo"}
