@@ -12,7 +12,7 @@ const VideoCard = ({
   },
 }) => {
   return (
-    <div className="h-auto w-full sm:w-76 md:w-80 mb-5 font-quicksand cursor-pointer">
+    <div className="h-auto w-full sm:w-76 md:w-80 mb-5 font-quicksand cursor-pointer xl:hover:scale-105 xl:transition-transform xl:duration-500">
       <Link href={videoId ? `/video/${videoId}` : `/videos/dua`}>
         <div>
           <div className="w-full mb-1">

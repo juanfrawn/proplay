@@ -11,6 +11,8 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 
+import { subscriberCountShort } from '../../utils/subscriberCountShort'
+
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [releatedVideos, setReleatedVideos] = useState([]);
@@ -38,6 +40,7 @@ const VideoDetail = () => {
             url={`https://www.youtube.com/watch?v=${query.VideoId}`}
             width="100%"
             height="100%"
+            controls
           />
         </div>
 
@@ -47,10 +50,10 @@ const VideoDetail = () => {
           </h1>
           <div className="flex justify-between mb-10">
             <span className="mr-3 text-base">
-              {videoDetail?.statistics.viewCount} visualizaciones
+              {subscriberCountShort(videoDetail?.statistics.viewCount)} visualizaciones
             </span>
             <span className="text-base flex items-center">
-              {videoDetail?.statistics.likeCount}
+              {subscriberCountShort(videoDetail?.statistics.likeCount)}
               <BsHandThumbsUp className="ml-2" />{" "}
             </span>
           </div>
